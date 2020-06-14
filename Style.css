@@ -12,19 +12,45 @@ html{
 .grid-container > div{
     text-align: left;
     text-align: center;
-    padding: 20px 0;
+    padding: 13px 0;
     font-size: 30px;
 }
 
 .item1{
+    top: 0;
     grid-area: 1 / 1 / 1 / 8;
-
+    background: #D5F2E3;
+    padding: 0%;
 }
 
 .item2{
     grid-area: 2/ 2 / 5 / 7;
     opacity: 0.7;
     background: #D5F2E3;
+}
+
+.grid-container-nav{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.grid-container-nav a{
+    text-align: left;
+    text-align: center;
+    font-size: 30px;
+    float: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.grid-container-nav a:hover {
+    background-color: rgba(114, 82, 63, 0.438);
+}
+
+.grid-container-nav a.active{
+    background-color: rgba(114, 82, 63, 0.438);
 }
 
 body{ 
@@ -42,35 +68,7 @@ h1{
     font-size: 2em;
 }
 
-.navt {
-    position: absolute;
-    background-color: #D5F2E3;
-    top: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.navt ul{
-    margin: 0;
-    display: inline-block;
-}
 
 
-
-.navt a {
-    float: left;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navt a:hover {
-    background-color: rgba(114, 82, 63, 0.438);
-}
-
-.navt a.active{
-    background-color: rgba(114, 82, 63, 0.438);
-}
 
 
