@@ -5,8 +5,7 @@ html{
 .grid-container{
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 0px;
-
+    grid-gap: 18px;
 }
 
 .grid-container > div{
@@ -17,45 +16,74 @@ html{
 }
 
 .item1{
-    top: 0;
     grid-area: 1 / 1 / 1 / 8;
-    background: #D5F2E3;
-    padding: 0%;
 }
 
 .item2{
-    grid-area: 2/ 2 / 5 / 7;
+    grid-area: 3/ 2 / 5 / 7;
     opacity: 0.7;
     background: #D5F2E3;
 }
 
-.grid-container-nav{
-    display: grid;
-    grid-template-columns: 1fr;
+.navt{
+    overflow: hidden;
+    background: #D5F2E3;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.grid-container-nav a{
-    text-align: left;
-    text-align: center;
-    font-size: 30px;
-    float: center;
+.left{
+    padding-left: 11.1%;
+}
+
+.navt a{
+    float: left;
+    display: block;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 30px;
 }
 
-.grid-container-nav a:hover {
+.navt a:hover {
     background-color: rgba(114, 82, 63, 0.438);
 }
 
-.grid-container-nav a.active{
+.navt a.active{
     background-color: rgba(114, 82, 63, 0.438);
+}
+
+.navt .icon{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navt a:not(:first-child) {display: none;}
+    .navt a.icon {
+      float: right;
+      display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navt.responsive {position: relative;}
+    .navt.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+}
+
+.navt.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 body{ 
-    margin: 56px auto;
-    line-height: 1.8;
+    margin: 0;
 }
 
 .bkgd{ 
